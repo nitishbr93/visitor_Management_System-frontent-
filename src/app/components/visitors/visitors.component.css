@@ -1,0 +1,146 @@
+/* .custab{
+    border: 1px solid #ccc;
+    padding: 5px;
+    margin: 10% 0;
+    box-shadow: 3px 3px 2px #ccc;
+    transition: 0.5s;
+    }
+.custab:hover{
+    box-shadow: 3px 3px 0px transparent;
+    transition: 0.5s;
+    }
+
+   
+
+#custom-search-input {
+  margin:0;
+  margin-top: 24px;
+  padding: 2px;
+}
+.col-md-12 {
+  width: 62%;
+}
+#custom-search-input .search-query {
+  padding-right: 3px;
+  padding-right: 4px \9;
+  padding-left: 3px;
+  padding-left: 4px \9;
+  
+
+  margin-bottom: 0;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 43px;
+}
+
+#custom-search-input button {
+  border: 0;
+  background: none;
+  
+  padding: 2px 5px;
+  margin-top: 2px;
+  position: relative;
+  left: -28px;
+  
+  margin-bottom: 0;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  color:green;
+}
+
+.search-query:focus + button {
+  z-index: 3;  
+}
+.input-group {
+  position: relative;
+  display: table;
+  border-collapse: separate;
+  padding-right: 0px;
+  padding-left: 183px;
+} */
+
+.search-box{
+  display: flex;
+  height: 8vh;
+  width: 38vw;
+  margin: 10px 30vw;
+  margin-top: 73px;
+}
+.input{
+  margin: 4px 28px;
+  width: 33vw;
+  height: 4vh;
+  border-radius: 10px;
+}
+.pagination{
+  display: flex;
+  margin-top: 5px;
+  margin-left: 10vw;
+
+}
+.qwe{
+  display: flex;
+  width: 70px;
+  height: 40px;
+}
+.qwe2{
+  display: flex;
+  width: 70px;
+  height: 40px;
+  margin-left: 3px;
+}
+.qwe1{
+  width: 70px;
+  height: 40px;
+  border: 1px solid;
+  margin-left: 1px;
+  margin-right: 1px;
+}
+button:hover{
+  background-color: blue;
+}
+.qwe3{
+  margin-left: 44vw;
+  
+}
+.qwe4{
+  width: 49px;
+}
+.advanceSearch{
+  margin-left: 12px;
+}
+.advsearchlabel{
+  font-size: 1.06rem;
+}
+.advsearchinput{
+  width: 13vw;
+  height: 24px;
+  margin-left: 5px;
+  border-radius: 11px;
+  text-align: center;
+  margin-top: 17px;
+
+}
+.dateRange1{
+  margin-left: 0vw;
+}
+.inputRange{
+  width: 12vw;
+  height: 29px;
+  margin-left: 8px;
+  border-radius: 14px;
+}
+.daterange{
+  font-size: 1.06rem;
+  margin-right: -1px;
+  margin-left: 16px;
+}
+.advsearchdiv{
+  height: 8vh;
+  width: 80vw;
+  margin-top: 20px;
+  margin-left: 10vw;
+  display: flex;
+  background-color: #efeeee;
+}

@@ -1,0 +1,127 @@
+ <!--  <h1 class="text-center">{{message}}</h1>
+         <div class="container text-center">
+            <img class="img-fluid" style="width: 100px;" src="https://www.seekpng.com/png/detail/138-1387775_login-to-do-whatever-you-want-login-icon.png" alt="">
+         </div>
+                <h1 class="text-center">Register here !!</h1>
+    
+    <div class="form " style="width: 40vw; height: 50vh; margin: auto; ">
+
+    
+    <form (ngSubmit)="onSubmit()">
+        <fieldset>
+                <legend class="text-center">valid information to register.
+                        <span class="req">
+                                <small> required *</small>
+                        </span>
+                </legend>
+            <label class="label" for="name1"><span class="req">*</span>Name :</label><br>
+            <input class="input" type="text" name="name" placeholder="Enter your name" required="required"  id="name1" autofocus [(ngModel)]="credential.name" ><br><br>
+
+            <label class="label" for="Email1"><span class="req">*</span>Email :</label><br>
+            <input type="email" name="email" placeholder="Enter your Email" required="required" id="Email1" class="input" [(ngModel)]="credential.email"><br><br> 
+
+            <label class="label" for="phone1"><span class="req">*</span>Phone No.:</label><br>
+            <input class="input" type="number" name="phone"  id="phone1" minlength="10" [(ngModel)]="credential.phone"><br><br>
+
+            <label class="label" for="address1"><span class="req">*</span>Address:</label><br>
+            <input class="input" type="text" name="address"  id="address1" [(ngModel)]="credential.address"><br><br>
+
+           
+
+
+            <label class="label"><span class="req">*</span>Gender :</label><br>
+
+            <label class="gender" for="nk2" >male </label>
+            <input type="radio" name="other" id="nk2" value="Male" [(ngModel)]="credential.gender">
+
+            <label class="male" for="nk3">Female </label>
+            <input type="radio" name="other" id="nk3" value="Female" [(ngModel)]="credential.gender">
+
+            <label class="male" for="nk1">Other </label>
+            <input type="radio" name="other" id="nk1" value="Other" [(ngModel)]="credential.gender"><br><br>
+            
+           <label class="label" for="date1"><span class="req">*</span>Visit Date</label><br>
+           <input class="input" type="date" id="date1" name="date" value="date" [(ngModel)]="credential.date"><br><br>
+
+           <label class="label" for="pass1"><span class="req">*</span>Password(8 characters minimum ) :</label><br>
+           <input class="input" type="password" name="password" placeholder="Enter password" required="required"  id="pass1" inputmode="numeric" minlength="8" [(ngModel)]="credential.password">
+
+           <div class="container text-center " style="margin-top: 20px;" >
+    <button type="submit" style="margin-right: 2px;" mat-raised-button color="primary">Register Now</button>
+    
+            <button type="reset" mat-raised-button color="accent">Reset</button>
+          </div>
+
+            <marquee style="color: black"><h3>This form is valid till Dated 31/jan/2023</h3></marquee>
+            
+
+        
+        </fieldset>
+    </form>    -->
+
+
+
+
+   <!---------------------------------------------------------------- -->
+
+
+   <h1 class="text-center" style="margin-top: 84px;">{{message}}</h1>
+         <div class="container text-center">
+            <img class="img-fluid" style="width: 100px;" src="https://www.seekpng.com/png/detail/138-1387775_login-to-do-whatever-you-want-login-icon.png" alt="">
+         </div>
+                <h1 class="text-center">Register here !!</h1> 
+    <!-- creating form -->
+    <div class="form " style="width: 40vw; height: 50vh; margin: auto; ">
+
+    
+    <form (ngSubmit)="onSubmit()">
+        <fieldset>
+                <legend class="text-center">valid information to register.
+                        <span class="req">
+                                <small> required *</small>
+                        </span>
+                </legend>
+            <label class="label" for="name1"><span class="req">*</span>Name :</label><br>
+            <input class="input" type="text" name="name" placeholder="Enter your name" required="required"  id="name1" autofocus [(ngModel)]="users.name" ><br><br>
+
+            <label class="label" for="Email1"><span class="req">*</span>Email :</label><br>
+            <input type="email" name="email" placeholder="Enter your Email" required="required" id="Email1" class="input" [(ngModel)]="users.email"><br><br> 
+
+            <label class="label" for="phone1"><span class="req">*</span>Phone No.:</label><br>
+            <input class="input" type="number" name="phone"  id="phone1" minlength="10" [(ngModel)]="users.phone"><br><br>
+
+            <label class="label" for="address1"><span class="req">*</span>Address:</label><br>
+            <input class="input" type="text" name="address"  id="address1" [(ngModel)]="users.address"><br><br>
+
+           
+
+
+            <label class="label"><span class="req">*</span>Gender :</label><br>
+
+            <label class="gender" for="nk2" >male </label>
+            <input type="radio" name="other" id="nk2" value="Male" [(ngModel)]="users.gender">
+
+            <label class="male" for="nk3">Female </label>
+            <input type="radio" name="other" id="nk3" value="Female" [(ngModel)]="users.gender">
+
+            <label class="male" for="nk1">Other </label>
+            <input type="radio" name="other" id="nk1" value="Other" [(ngModel)]="users.gender"><br><br>
+            
+           <label class="label" for="date1"><span class="req">*</span>Visit Date</label><br>
+           <input class="input" type="date" id="date1" name="date" value="date" [(ngModel)]="users.date"><br><br>
+
+           <label class="label" for="pass1"><span class="req">*</span>Purpose </label><br>
+           <input class="input" type="text" name="password" placeholder="Enter password" required="required"  id="pass1" inputmode="numeric" minlength="8" [(ngModel)]="users.password">
+
+           <div class="container text-center " style="margin-top: 20px;" >
+    <button type="submit" style="margin-right: 2px;" mat-raised-button color="primary">Update Record</button>
+    
+            <button type="reset" mat-raised-button color="accent">Reset</button>
+          </div>
+
+            <marquee style="color: black"><h3>This form is valid till Dated 31/jan/2023</h3></marquee>
+            
+
+        
+        </fieldset>
+    </form>

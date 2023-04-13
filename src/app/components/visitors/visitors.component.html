@@ -1,0 +1,234 @@
+<!?-- Global-search -->
+
+<!-- <div class="search-box">
+    <input class="input" #box type="text" placeholder="search visitors" (keyup)="getData(box.value)" />
+</div> -->
+<!-- <div class="search-box">
+    <input class="input" name="search"  [(ngModel)]="name" (ngModelChange)="sendData($event)" placeholder="search visitors"  />
+</div> -->
+
+<!?-- search data between date ranges -->
+
+<!-- <div class="rangeContainer" style="height: 5wv; width: 40vw; margin-top: 10px; text-align: center; margin-left: 10vw; display: flex;">
+    <div class="dateRange1">
+        <label class="daterange" for="date1">From:</label>
+        <input  class="inputRange" type="datetime-local" #date1 id="date1" placeholder="Starting-Date" style="margin-right: 10px;">
+        <label class="daterange" for="date2">To:</label>
+        <input class="inputRange" type="datetime-local"#date2 id="date2" placeholder="Ending-Date" style="margin-right: 10px;">
+        <button (click)="dateRange(date1.value,date2.value)" mat-raised-button color="primary">Search</button>
+    </div>
+</div> -->
+
+<!?-- advance search -->
+  <!-- <div class="advsearchdiv" style=" height: 7vh; width: 80vw; margin-top: 20px; margin-left: 10vw; display: flex;" >
+    <div class="advanceSearch">
+        <label class="advsearchlabel" for="name">Name:</label>
+   <input type="text" class="advsearchinput" #box1  id="name" placeholder="Enter name" style="margin-right: 10px;">
+</div>
+<div class="advanceSearch">
+         <label class="advsearchlabel" for="email">email:</label>
+   <input type="text" class="advsearchinput" #box2  id="email" placeholder="Enter Email">
+</div>
+<div class="advanceSearch">
+        <label class="advsearchlabel" for="date">Date:</label>
+   <input type="date" class="advsearchinput" #box3  id="date"  style="margin-right: 10px;">
+</div>
+<div class="advanceSearch">
+        <label class="advsearchlabel" for="password">Purpose:</label>
+   <input type="text" class="advsearchinput" #box4 id="password" placeholder="Enter Purpose ">
+</div>
+<div class="advanceSearch">
+   <button  style="margin-left: 10px;" mat-raised-button color="green" (click)="advanceSearch(box1.value,box2.value,box3.value,box4.value)">Search</button>
+</div>
+   
+ </div> -->
+
+
+<!?-- table -->
+
+     <!-- <div style="margin-left: 10vw; margin-top: 20px; width: 80vw; height: 50vh;">  
+    <table  cellspacing="2px" cellpadding="2px" border="3px" style="width: 80vw; height: 50vh;">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone No</th>
+            <th>Gender</th>
+            <th>Visiting Date</th>
+            <th>Address</th>
+            <th>Purpose</th> 
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of users let i=index ">
+            <td>{{(size*(pages-1))+(i+1)}}</td>
+            <td>{{user.name}}</td>
+            <td>{{user.email}}</td>
+            <td>{{user.phone}}</td>
+            <td>{{user.gender}}</td>
+            <td>{{user.date}}</td>
+            <td>{{user.address}}</td>
+            <td>{{user.password}}</td>
+
+            <td class="text-center"><button mat-raised-button color="accent" (click)="deletecredential(user.id)"> Delete</button>
+                <button button mat-raised-button color="primary" style="margin-left: 2px;" (click)="updateCredintial(user.id)">Update</button>
+            </td>
+          </tr>
+    </tbody>
+     
+</table> 
+     </div> -->
+     
+<!?-- pagination -->
+  <!-- <div class="pagination">
+<div class="qwe"><button (click)="nextprev('minus')">Previous</button></div>
+<div class="qwe1">
+    <div style="height: 20px; width: 40px; margin: 9px 26px;">{{pages}}</div>
+</div>
+<div class="qwe2"><button (click)="nextprev('add')">Next</button></div>
+<div class="qwe1 qwe3">
+
+    <div  style="height: 20px; width: 40px; margin: 9px 26px;">{{pages}}</div>
+</div>
+<div class="qwe1">
+    <div style="height: 20px; width: 40px; margin: 9px 26px;">of</div>
+</div>
+<div class="qwe1">
+    <div style="height: 20px; width: 40px; margin: 9px 26px;">{{tP}}</div>
+</div>
+
+<input type="number" #data class="qwe4">
+<div class="qwe2">    
+    <button class="button" (click)="dataSearch(data.value)" >search</button>
+</div>
+  </div> -->
+
+
+  <!?-- =========================================================================================== -->
+
+  <!?-- Global-search -->
+
+
+ <div class="search-box">
+    <input class="input" name="search"  [(ngModel)]="name" (ngModelChange)="sendData($event)" placeholder="search visitors"  />
+</div>
+
+<!?-- search data between date ranges -->
+
+ <div class="rangeContainer" style="height: 5wv; width: 40vw; margin-top: 10px; text-align: center; margin-left: 10vw; display: flex;">
+    <div class="dateRange1">
+        <label class="daterange" for="date1">From:</label>
+        <input  class="inputRange" type="datetime-local" #date1 id="date1" placeholder="Starting-Date" style="margin-right: 10px;">
+        <label class="daterange" for="date2">To:</label>
+        <input class="inputRange" type="datetime-local"#date2 id="date2" placeholder="Ending-Date" style="margin-right: 10px;">
+        <button (click)="dateRange(date1.value,date2.value)" mat-raised-button color="primary">Search</button>
+    </div>
+</div> 
+
+<!?-- advance search -->
+
+  <div class="advsearchdiv" >
+    <div class="advanceSearch">
+        <label class="advsearchlabel" for="name">Name:</label>
+   <input type="text" class="advsearchinput" #box1  id="name" placeholder="Enter name" style="margin-right: 10px;">
+</div>
+<div class="advanceSearch">
+         <label class="advsearchlabel" for="email">email:</label>
+   <input type="text" class="advsearchinput" #box2  id="email" placeholder="Enter Email">
+</div>
+<div class="advanceSearch">
+        <label class="advsearchlabel" for="date">Date:</label>
+   <input type="date" class="advsearchinput" #box3  id="date"  style="margin-right: 10px;">
+</div>
+<div class="advanceSearch">
+        <label class="advsearchlabel" for="password">Purpose:</label>
+   <input type="text" class="advsearchinput" #box4 id="password" placeholder="Enter Purpose ">
+</div>
+<div class="advanceSearch">
+   <button  style="margin-left: 10px; margin-top: 13px;" mat-raised-button color="green" (click)="advanceSearch(box1.value,box2.value,box3.value,box4.value)">Search</button>
+</div>
+   
+ </div>
+
+
+<!?-- table -->
+
+      <div style="margin-left: 10vw; margin-top: 20px; width: 80vw; height: 50vh;">  
+    <table  cellspacing="2px" cellpadding="2px" border="3px solid black" style="width: 80vw; height: 50vh;">
+    <thead>
+        <tr>
+            <th>S No.</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone No</th>
+            <th>Gender</th>
+            <th>Visiting Date</th>
+            <th>Address</th>
+            <th>Purpose</th> 
+            <th>Image</th>
+            <th>Status</th>
+           
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of users let i=index ">
+            <td>{{(size*(pages-1))+(i+1)}}</td>
+            <td>{{user.name}}</td>
+            <td>{{user.email}}</td>
+            <td>{{user.phone}}</td>
+            <td>{{user.gender}}</td>
+            <td>{{user.date}}</td>
+            <td>{{user.address}}</td>
+            <td>{{user.password}}</td>
+            <td><img src="http://localhost:8080/api/images/{{user.id}}
+                "  width="75px" height="75px"></td>
+
+            <td><div *ngIf="(user.date)<(changeFormat) else elseBlock" style="height: 2vh; width: 4vw; background-color: rednpm; border: 1px solid red; border-radius: 20px; margin: auto; color: aliceblue;"></div>
+            <ng-template #elseBlock>
+                <div style="height: 2vh; width: 4vw; background-color:green; border: 1px solid green; border-radius: 20px; margin: auto; color: aliceblue;"></div>
+            </ng-template>
+            </td>
+            <!-- <td></td> -->
+
+            <td class="text-center"><button mat-raised-button color="accent" (click)="deletecredential(user.id)"> Delete</button>
+                <button button mat-raised-button color="primary" style="margin-left: 2px;" (click)="updateCredintial(user.id)">Update</button>
+            </td>
+          </tr>
+    </tbody>
+     
+</table> 
+     </div>
+     
+<!?-- pagination -->
+   <div class="pagination">
+<div class="qwe"><button (click)="nextprev('minus')">Previous</button></div>
+<div class="qwe1">
+    <div style="height: 20px; width: 40px; margin: 9px 26px;">{{pages}}</div>
+</div>
+<div class="qwe2"><button (click)="nextprev('add')">Next</button></div>
+<div class="qwe1 qwe3">
+
+    <div  style="height: 20px; width: 40px; margin: 9px 26px;">{{pages}}</div>
+</div>
+<div class="qwe1">
+    <div style="height: 20px; width: 40px; margin: 9px 26px;">of</div>
+</div>
+<div class="qwe1">
+    <div style="height: 20px; width: 40px; margin: 9px 26px;">{{tP}}</div>
+</div>
+
+<input type="number" #data class="qwe4">
+<div class="qwe2">    
+    <button class="button" (click)="dataSearch(data.value)" >search</button>
+</div>
+  </div>
+
+
+  <!?-- =========================================================================================== -->
+
+  <!?-- ========================------------------------============================== -->
+
+  

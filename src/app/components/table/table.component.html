@@ -1,0 +1,27 @@
+<div *ngIf="users.length>0" class="table">
+
+    <table>
+            <thead>
+            <th>S No.</th>
+            <th>name</th>
+            <th>Address</th>
+            <th>Purpose</th>
+            <th>Visiting Date</th>
+            <th>Action</th>
+    </thead>
+    <tbody>
+<tr *ngFor = "let user of users">
+<td>{{user.id}}</td>
+<td>{{user.name}}</td>
+<td>{{user.address}}</td>
+<td>{{user.password}}</td>
+<td>{{user.date}}</td>
+<td><button>view</button></td>
+<td><button>Delete</button></td>
+<td><button>Update</button></td>
+
+</tr>
+
+    </tbody>
+    </table>
+</div>

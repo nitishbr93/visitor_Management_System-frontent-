@@ -1,0 +1,202 @@
+  <div class="main">
+  <h3 style="text-align: center; font-weight: bold; color: green;margin-top: 95px;">{{message1}}</h3>
+ <!-- <h1 class="text-center">{{message}}</h1> -->
+<div class="container text-center">
+        <img class="img-fluid" style="width: 100px;"
+                src="https://www.seekpng.com/png/detail/138-1387775_login-to-do-whatever-you-want-login-icon.png"
+                alt="">
+</div>
+<h1 class="text-center">Register here !!</h1>
+
+<div class="form " style="width: 40vw; height: 50vh; margin: auto; ">
+
+
+        <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+                <fieldset>
+                        <legend class="text-center">valid information to register.
+                                <span class="req">
+                                        <small> required *</small>
+                                </span>
+                        </legend>
+                        <label class="label" for="name1"><span class="req">*</span>Name :</label><br>
+                        <input class="input" type="text" name="name" placeholder="Enter your name" 
+                                id="name1" formControlName="name">
+                                <small class="input" style="color: red;" *ngIf="Names.errors?.['required'] && (Names.touched || Names.dirty)">First name is required</small>
+                                <small class="input" style="color: red;" *ngIf="Names.errors?.['minlength'] && (Names.touched || Names.dirty)">First name is too short</small>
+                                <small class="input" style="color: red;" *ngIf="Names.errors?.['pattern'] && (Names.touched || Names.dirty)">First name should start with Alphabet</small><br><br>
+  
+
+
+
+                        <label class="label" for="Email1"><span class="req">*</span>Email :</label><br>
+                        <input type="email" name="email" placeholder="Enter your Email" required="required" id="Email1"
+                                class="input" formControlName="email">
+
+                                <small class="input" style="color: red;" *ngIf="Emails.errors?.['required'] && (Emails.touched || Emails.dirty)">Email is Required</small>
+                                <small class="input" style="color: red;" *ngIf="Emails.errors?.['email'] && (Emails.touched || Emails.dirty)">Email is invalid</small><br><br>
+
+
+
+
+
+                        <label class="label" for="phone1"><span class="req">*</span>Phone No.:</label><br>
+                        <input class="input" type="text" name="phone" id="phone1"  formControlName="phone">
+
+                        <small class="input" style="color: red;" *ngIf="Phones.errors?.['required'] && (Phones.touched || Phones.dirty)">Phone No is Required</small>
+
+                        <small class="input" style="color: red;" *ngIf="Phones.errors?.['pattern'] && (Phones.touched || Phones.dirty)">Phone No is invalid</small>
+
+                        <small class="input" style="color: red;" *ngIf="Phones.errors?.['minlength'] && (Phones.touched || Phones.dirty)">Phone No is Short</small>
+
+                        <small class="input" style="color: red;" *ngIf="Phones.errors?.['maxlength'] && (Phones.touched || Phones.dirty)">Phone No is Long</small>
+                        <br><br>
+
+                        <label class="label" for="address1"><span class="req">*</span>Address:</label><br>
+                        <input class="input" type="text" name="address" id="address1"
+                                formControlName="address">
+                                <small class="input" style="color: red;" *ngIf="Addresss.errors?.['required'] && (Addresss.touched || Addresss.dirty)">Address is Required</small><br><br>
+                         
+
+
+                        <label class="label"><span class="req">*</span>Gender :</label><br>
+
+                        <label class="gender" for="nk2">male </label>
+                        <input type="radio" name="other" id="nk2" value="Male" formControlName="gender" >
+
+                        <label class="male" for="nk3">Female </label>
+                        <input type="radio" name="other" id="nk3" value="Female" formControlName="gender">
+
+                        <label class="male" for="nk1">Other </label>
+                        <input type="radio" name="other" id="nk1" value="Other" formControlName="gender">
+                        <small class="input" style="color: red;" *ngIf="Genders.errors?.['required'] && (Genders.touched || Genders.dirty)">Select Gender</small><br><br>
+
+
+
+
+                        <label class="label" for="date1"><span class="req">*</span>Visiting Date-Time</label><br>
+                        <input class="input" type="datetime-local" id="date1" name="date"
+                                formControlName="date">
+                                <small class="input" style="color: red;" *ngIf="Dates.errors?.['required'] && (Dates.touched || Dates.dirty)">Date is Required</small>
+                                
+
+
+
+                                <br><br>
+                        <label class="label" for="pass1"><span class="req">*</span>Purpose</label><br>
+                        <input class="input" type="text" name="password" placeholder="Enter password"   id="pass1" formControlName="password"  >
+
+                        <small class="input" style="color: red;" *ngIf="Passwords.errors?.['required'] && (Passwords.touched || Passwords.dirty)">Purpose is Required</small><br><br>
+
+                        <label class="label" for="file"><span class="req">*</span>uplaod Image</label><br>
+                        <input class="input" type="file" (change)="selectfile($event)">
+                
+                   
+
+
+                        
+                        <div class="container text-center " style="margin-top: 20px;">
+                                <button type="submit" style="margin-right: 2px;" mat-raised-button
+                                        color="primary" [disabled]="registerForm.invalid" >Book Appointment</button>
+
+                                <button type="reset" mat-raised-button color="accent">Reset</button>
+                        </div>
+                        
+
+                        <marquee style="color: black">
+                                <h3>This form is valid till Dated 31/jan/2023</h3>
+                        </marquee>
+
+
+
+                </fieldset>
+        </form>
+
+</div>
+</div>
+
+
+
+
+
+<!-- ------------------------------------------------------------------------------------------- -->
+
+
+ <!-- <h1 class="text-center">{{message}}</h1>
+<div class="container text-center">
+        <img class="img-fluid" style="width: 100px;"
+                src="https://www.seekpng.com/png/detail/138-1387775_login-to-do-whatever-you-want-login-icon.png"
+                alt="">
+</div>
+<h1 class="text-center">Register here !!</h1>
+
+<div class="form " style="width: 40vw; height: 50vh; margin: auto; ">
+
+
+        <form (ngSubmit)="onSubmit()">
+                <fieldset>
+                        <legend class="text-center">valid information to register.
+                                <span class="req">
+                                        <small> required *</small>
+                                </span>
+                        </legend>
+                        <label class="label" for="name1"><span class="req">*</span>Name :</label><br>
+                        <input class="input" type="text" name="name" placeholder="Enter your name" 
+                                id="name1" autofocus [(ngModel)]="credential.name" #nameField="ngModel" ><br><br>
+  
+
+
+
+                        <label class="label" for="Email1"><span class="req">*</span>Email :</label><br>
+                        <input type="email" name="email" placeholder="Enter your Email" required="required" id="Email1"
+                                class="input" [(ngModel)]="credential.email"><br><br>
+
+                        <label class="label" for="phone1"><span class="req">*</span>Phone No.:</label><br>
+                        <input class="input" type="text" name="phone" id="phone1" minlength="10"
+                                [(ngModel)]="credential.phone" required><br><br>
+
+                        <label class="label" for="address1"><span class="req">*</span>Address:</label><br>
+                        <input class="input" type="text" name="address" id="address1"
+                                [(ngModel)]="credential.address" required><br><br>
+
+
+
+
+                        <label class="label"><span class="req">*</span>Gender :</label><br>
+
+                        <label class="gender" for="nk2">male </label>
+                        <input type="radio" name="other" id="nk2" value="Male" [(ngModel)]="credential.gender" required>
+
+                        <label class="male" for="nk3">Female </label>
+                        <input type="radio" name="other" id="nk3" value="Female" [(ngModel)]="credential.gender" required>
+
+                        <label class="male" for="nk1">Other </label>
+                        <input type="radio" name="other" id="nk1" value="Other" [(ngModel)]="credential.gender" required><br><br>
+
+                        <label class="label" for="date1"><span class="req">*</span>Visiting Date-Time</label><br>
+                        <input class="input" type="datetime-local" id="date1" name="date"
+                                [(ngModel)]="credential.date"><br><br>
+
+                        <label class="label" for="pass1"><span class="req">*</span>Purpose</label><br>
+                        <input class="input" type="text" name="password" placeholder="Enter password" ng-required="credential.password"  id="pass1"   [(ngModel)]="credential.password" >
+
+                        
+                        <div class="container text-center " style="margin-top: 20px;">
+                                <button type="submit" style="margin-right: 2px;" mat-raised-button
+                                        color="primary">Book Appointment</button>
+
+                                <button type="reset" mat-raised-button color="accent">Reset</button>
+                        </div>
+                        
+
+                        <marquee style="color: black">
+                                <h3>This form is valid till Dated 31/jan/2023</h3>
+                        </marquee>
+
+
+
+                </fieldset>
+        </form>
+
+</div>
+
+ -->

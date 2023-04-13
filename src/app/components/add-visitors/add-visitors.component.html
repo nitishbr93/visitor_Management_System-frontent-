@@ -1,0 +1,33 @@
+<input  type="text" #box placeholder="Enter your mobile No">
+<Button (click)="getByMobileNumber(box.value)">Search</Button> 
+
+<div *ngIf="users.length>0" class="table">
+
+        <table border="2px" cellspacing="2px" cellpadding="2px" color="grey">
+                <thead>
+                <th>S No.</th>
+                <th>name</th>
+                <th>Address</th>
+                <th>Purpose</th>
+                <th>Visiting Date</th>
+                
+                <th>Action</th>
+        </thead>
+        <tbody>
+    <tr *ngFor = "let user of users">
+    <td>{{user.id}}</td>
+    <td>{{user.name}}</td>
+    <td>{{user.address}}</td>
+    <td>{{user.password}}</td>
+    <td>{{user.date}}</td>
+    <td>
+    <button mat-raised-button color="primary" (click)="viewData(user.id)">View</button>
+    <button mat-raised-button color="accent" (click)="deletecredential(user.id)">Delete</button>
+    <button mat-raised-button color="primary" (click)="updateCredintial(user.id)">Update</button></td>
+    
+    </tr>
+    
+        </tbody>
+        </table>
+    </div>
+    
